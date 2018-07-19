@@ -18,8 +18,8 @@ IP：192.168.122.101
 
 ```shell
 rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm  #安装epel源
-yum install bind  #用于建立DNS的软件
-yum install 32:bind-utils-9.8.2-0.68.rc1.el6.x86_64 #dig工具
+yum install bind -y #用于建立DNS的软件
+yum install 32:bind-utils-9.8.2-0.68.rc1.el6.x86_64 -y #dig工具
 ```
 
 
