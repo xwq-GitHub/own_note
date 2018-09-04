@@ -273,9 +273,9 @@ kill -9 ${PID} #强制终止进程
 ### 3、运维工具介绍
 
 
-* ##### htop
-* ##### dstat
-* ##### glances
+* ##### [htop](https://github.com/fushisanlang/own_note/blob/master/linux/htop%E5%B7%A5%E5%85%B7.md)
+* ##### [dstat](https://github.com/fushisanlang/own_note/blob/master/linux/dstat%E5%B7%A5%E5%85%B7.md)
+* ##### [glances](https://github.com/fushisanlang/own_note/blob/master/linux/glances%E5%B7%A5%E5%85%B7.md)
 
 
 ***
