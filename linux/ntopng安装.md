@@ -36,3 +36,16 @@ vim /etc/ntopng/ntopng.start
 --interface 1
 sh /soft/ntopng-2.4-stable/ntopng 
 ```
+
+
+```shell
+cd /etc/yum.repos.d/
+wget http://packages.ntop.org/centos-stable/ntop.repo -O ntop.repo
+rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+wget https://copr.fedoraproject.org/coprs/saltstack/zeromq4/repo/epel-6/saltstack-zeromq4-epel-6.repo
+rpm -ivh http://packages.ntop.org/rpm6/extra/hiredis-0.10.1-3.el6.x86_64.rpm http://packages.ntop.org/rpm6/extra/hiredis-devel-0.10.1-3.el6.x86_64.rpm
+yum erase zeromq3 (Do this once to make sure zeromq3 is not installed)
+yum clean all
+yum update
+yum install   ntopng ntopng-data cento
+```

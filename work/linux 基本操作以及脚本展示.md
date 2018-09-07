@@ -1,4 +1,4 @@
-# linux 基本以及脚本展示
+# linux 基础以及脚本展示
 ***
 
 
@@ -7,18 +7,23 @@
 ### 1、shell
 
 命令解析器，俗称壳，用来与核（内核，kernel）进行区分。
-shell的作用是，用来与内核进行交流，以保护内核。
-我们大多数敲的命令，进行的操作都是在shell中进行。
+shell的作用是：用来与内核进行交流，以保护内核。
+我们大多数执行的命令，进行的操作都是在shell中进行。
 
 * shell种类
 
   >   Linux 的 Shell 种类众多，常见的有：
 
   >  Bourne Shell（/usr/bin/sh或/bin/sh）
+  >
   >  Bourne Again Shell（/bin/bash）
+  >
   >  C Shell（/usr/bin/csh）
+  >
   >  K Shell（/usr/bin/ksh）
+  >
   >  Shell for Root（/sbin/sh）
+  >
 
 一般交流沟通中所说的shell，指的是Bash，即Bourne Shell。
 
@@ -286,8 +291,9 @@ kill -9 ${PID} #强制终止进程
 
 shell脚本一般通过.sh后缀标识。
 
-* shell脚本执行方式
-       一般的脚本有两种执行方式。
+* ##### shell脚本执行方式
+
+  一般的脚本有两种执行方式。
 ```shell
 chmod +x test.sh
 ./test.sh
@@ -545,8 +551,9 @@ REPORT ${logfile}
 
 ### 2、数据库备份传输脚本
 
-```shell
+```bash
 #!/bin/bash
+
 #for ronglian db_bak transfer from IDC to SANYI_office.
 #base on openssh & scp
 #by ronglian_devops
