@@ -267,9 +267,6 @@ ps -ef |grep vim #查看包含vim字符的相关进程信息
 root     11184 10767  0                17:58    pts/0    00:00:00                      vim /etc/sysconfig/network-scripts/ifcfg-eth0
 root     11236 10767  0                18:00    pts/0    00:00:00                      grep vim
 
-top 可以实时动态地查看系统的整体运行情况
-http://note.youdao.com/noteshare?id=dbe5dd2f10e5fea3dfd3843ebeebf9ad&sub=94C1203389584ECF8B9CEAA91E81A462
-
 free  #显示系统内存使用情况 
 
 kill -9 ${PID} #强制终止进程
