@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <title>Nginx Log</title>
+    </head>
+<style type="text/css">
+
+h1 {color:#000033;font-size:70px;}
+h2 {color:#4B0082;font-size:56px;}
+h4 {color:#4B0082;font-size:30px;}
+
+
+#rounded-corner
+{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    margin: 45px;
+    width: 480px;
+    text-align: left;
+    border-collapse: collapse;
+}
+#rounded-corner thead th.rounded-company
+{
+    background: #b9c9fe url('table-images/left.png') left -1px no-repeat;
+}
+#rounded-corner thead th.rounded-q4
+{
+    background: #b9c9fe url('table-images/right.png') right -1px no-repeat;
+}
+#rounded-corner th
+{
+    padding: 8px;
+    font-weight: normal;
+    font-size: 13px;
+    color: #039;
+    background: #b9c9fe;
+}
+#rounded-corner td
+{
+    padding: 8px;
+    background: #e8edff;
+    border-top: 1px solid #fff;
+    color: #669;
+}
+#rounded-corner tbody tr:hover td
+{
+    background: #d0dafd;
+}
+</style>
+
+    <body bgcolor="#FFFFFF">
+    <div id="main" align="center" >
+
+    <H1 align="center">NGINX LOG ANALYZE</H1>
+    <hr>
+    <div id="left" style="float:left ;  width:50%;  height:100%;">
+        <h4 align="center">请输入日期及应用id</h4>
+        <form method="post" action="/poem">
+        <p align="center" >Date：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="日期格式:20180626" name="noun1"></p>
+        <p align="center" >Serverid：<input type="text" placeholder="id: 1~5" name="noun2"></p>
+        <div align="center">
+        <input type="submit" ; align="center">
+        </div>
+
+        </form>
+    </div>
+
+
+
+
+<div id="right" style="float:left ;  width:50%; height:100%;">
+<h4 align="center">ID-应用名对照</h4>
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+ <thead>
+        <tr>
+            <th scope="col" class="rounded-company" align="center">&nbsp;&nbsp;id&nbsp;&nbsp;</th>
+            <th scope="col" class="rounded-q1" align="center">&nbsp;&nbsp;应用名&nbsp;&nbsp;</th>
+            <th scope="col" class="rounded-q2" align="center">&nbsp;&nbsp;域名&nbsp;&nbsp;</th>
+        </tr>
+    </thead>
+<tbody>
+<tr>
+    <td align="center">&nbsp;&nbsp;1&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;共享扫码&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;buy.1sh123.com&nbsp;&nbsp;</td>
+</tr>
+<tr>
+    <td align="center">&nbsp;&nbsp;2&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;广西扫码&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;gxjh.1sh123.com&nbsp;&nbsp;</td>
+</tr>
+<tr>
+    <td align="center">&nbsp;&nbsp;3&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;上海扫码&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;shjh.1sh123.com&nbsp;&nbsp;</td>
+</tr>
+<tr>
+    <td align="center">&nbsp;&nbsp;4&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;微信缴费&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;wx.ejf.com&nbsp;&nbsp;</td>
+</tr>
+<tr>
+    <td align="center">&nbsp;&nbsp;5&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;陕西缴费&nbsp;&nbsp;</td>
+    <td align="center">&nbsp;&nbsp;ccb.ejf.com&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+    </body>
+
+</html>
