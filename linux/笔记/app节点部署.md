@@ -2,7 +2,7 @@
    
  
 
-    ```shell
+  
     mkdir /home/ap   
     useradd -d /home/ap/tomcat -u 504 tomcat
     yum install -y nfs-utils
@@ -22,7 +22,7 @@
         export LANG=zh_CN.UTF-8
     source .bash_profile
     vim jfpt_qd/conf/server.xml
-```
+
 *　日志同步配置
 
 日志服务器：192.168.1.143 
