@@ -1,8 +1,8 @@
-* tomcat配置
+   * tomcat配置
    
  
 
-    
+  
     mkdir /home/ap   
     useradd -d /home/ap/tomcat -u 504 tomcat
     yum install -y nfs-utils
