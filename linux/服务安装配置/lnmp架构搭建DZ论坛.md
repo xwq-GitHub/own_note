@@ -2,7 +2,7 @@
 
 * 基本安装
 
-
+```shell
     tar zxf nginx-1.10.1.tar.gz
     cd nginx-1.10.1
     vim auto/cc/gcc
@@ -37,7 +37,7 @@
     nginx -t
     nginx -s reload
 
-
+```
 
 * 压力测试
 
