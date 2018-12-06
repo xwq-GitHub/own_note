@@ -41,7 +41,7 @@
 
 * 压力测试
 
-
+```
     vim nginx.conf
         location /status {
             stub_status on;
@@ -52,10 +52,10 @@
     #-n 总请求个数 -c 并发数     
     #本句即为，一共300个并发，对172.25.15.1发送300个请求
     #访问172.25.15.1/status 
-
+```
 * https
 
-
+```
     vim nginx.conf
         #去掉ssl的注释        
         server_name  server1.example.com;
@@ -65,13 +65,13 @@
     mv cert.pem /usr/local/lnmp/nginx/conf/
     nginx -t   #先建立pem文件再检查语法，否则会因为缺失文件报错
     nginx -s reload
-    
+```
 此时，通过https访问172.25.15.1时，会提示下载证书
 
 
 * 虚拟主机
 
-
+```
     vim nginx.conf
         server {
             listen 80;
@@ -88,7 +88,7 @@
     vim index.html
         hello westos.org
     nginx -s reload
-
+```
     #在主机的/etc/hosts 中添加解析
     #然后访问
 
@@ -98,7 +98,7 @@
     #分别打开server2,server3的http服务，配置默认发布目录
 
 **server1**
-    
+ ```   
     vim nginx.conf
         upstream westos {     #15行 http{之后
         #此句为添加一个westos
@@ -109,7 +109,7 @@
         proxy_pass http://westos;   #此处为上文添加的westos
     nginx -t
     nginx -s reload
-
+```
 默认的负载均衡方式为循环轮矫，可以通过在某一IP后添加   
 
         weight=n
@@ -131,7 +131,7 @@ backup
 
 
 * 动态模块安装
-
+```
     
     ./configure --prefix=/tmp/nginx \
     --with-http_perl_module=dynamic \
@@ -140,7 +140,7 @@ backup
     vim conf/nginx.conf
 	    load_module "modules/ngx_http_perl_module.so";  
 	    #10行   此处添加的时需要使用的模块
-
+```
 ***注意 因为之前安装过ungix，并且/usr/local/sbin/ungix连接的是之前安装时的命令。***
 
 ***所以在使用时，应该使用/tmp/nginx/sbin/下的nginx命令。***
@@ -149,7 +149,7 @@ backup
 # mysql
 
 *　软件安装
-
+```
     #编译
     cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
     #安装目录
@@ -175,7 +175,7 @@ backup
 
     make
     make install
-
+```
     #注意
     #安装过程因为是在虚拟机中进行，所以可能会有虚拟机磁盘空间不足的问题
     #需要通过lvm方式拉伸虚拟机磁盘空间。
@@ -202,7 +202,7 @@ backup
 
 * 初始化
 
-
+```
     useradd -u 27 -M -d /usr/local/lnmp/mysql/data -s /sbin/nologin mysql    
     #为mysql创建用户，如果通过rpm安装，会自动创建此用户
     groupmod -g 27 mysql
@@ -229,12 +229,12 @@ backup
     mysql -p
         >alter user root@localhost identified by 'yierer333';   
         #更改密码
-
+```
 # PHP
 
 * 编译
 
-
+```
     tar jxf php-5.6.20.tar.bz2 
     yum install re2c-0.13.5-1.el6.x86_64.rpm 
     yum install libmcrypt-* -y
@@ -253,10 +253,10 @@ backup
 
     make
     make install
-
+```
 * 配置
 
-
+```
     cd /usr/local/lnmp/php
     cd etc/
     cp php-fpm.conf.default php-fpm.conf
@@ -294,10 +294,10 @@ backup
     #此时通过访问172.25.15.1
     #即可查看关于php的内容，而非index.php文件的内容和
 
-
+```
 
 # 配置论坛
-
+```
 
     unzip Discuz_X3.2_SC_UTF8.zip -d /usr/local/lnmp/nginx/html
     cd /usr/local/lnmp/nginx/html
@@ -310,7 +310,7 @@ backup
     #通过浏览器访问172.25.15.1/upload进行论坛配置
 
 
-
+```
 
 
 
